@@ -469,7 +469,7 @@ footer{background:rgba(7,16,24,0.98);border-top:1px solid rgba(230,184,106,0.1);
     <div class="about-txt reveal">
       <h2>محمد أحمد عبدالنبي</h2>
       <p class="sub">Bebo | Pranic Healer (Psychotherapy Lvl 3) | ICF Life Coach</p>
-      <p>كان فيه وقت مش بعيد كنت بحس إني عايش بس مش موجود. بشتغل، بتكلم ناس، بضحك… بس جوّايا في صمت عميق مكنتش بعرف أفهمه.</p>
+      <p>كان فيه وقت مش بعيد كنت بحس إني عايش بس مش موجود. بشتغل، بكلم ناس بضحك… بس جوّايا في صمت عميق مكنتش بعرف أفهمه.</p>
       <p>مش من كتاب أو دورة بدأت رحلتي. بدأت من الأذى. من اللحظة اللي وقفت فيها قدام نفسي وسألت: "ليه أنا كده؟"</p>
       <p>رحلة وعي مساحة آمنة. بنشتغل فيها على الوعي الذاتي، الشفاء الطاقي، وإعادة الاتصال بالنفس الحقيقية.</p>
       <div class="pillars">
@@ -984,7 +984,7 @@ async function submitFunnel() {
   var msg = document.getElementById('fMsg');
   if (!n || !em) { showMsg(msg, 'من فضلك اكتب اسمك وإيميلك', 'err'); return; }
   var btn = event.target; btn.disabled = true; btn.textContent = 'جاري الإرسال...';
-  await sbInsert('leads', { name: n, email: em, phone: p, goal: g, source: 'funnel', created_at: new Date().toISOString() });
+  await sbInsert('leads', { name: n, Email: em, phone: p, goal: g, Source: 'funnel', created_at: new Date().toISOString() });
   btn.disabled = false; btn.textContent = 'ابدأ رحلتي ✨';
   showMsg(msg, 'أهلاً ' + n + '! هيوصلك تأكيد قريباً 💛', 'ok');
   document.getElementById('fName').value  = '';
