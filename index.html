@@ -1000,7 +1000,7 @@ async function submitBooking() {
   var msg = document.getElementById('bMsg');
   if (!n || !p) { showMsg(msg, 'من فضلك اكتب اسمك ورقمك', 'err'); return; }
   var btn = event.target; btn.disabled = true; btn.textContent = 'جاري الإرسال...';
-  await sbInsert('bookings', { name: n, phone: p, session_type: s, status: 'pending', created_at: new Date().toISOString() });
+  await sbInsert('bookings', { Name: n, Phone: p, session_type: s, status: 'pending', created_at: new Date().toISOString() });
   btn.disabled = false; btn.textContent = 'احجز دلوقتي ✨';
   showMsg(msg, 'تم استلام طلبك يا ' + n + '! هنتواصل معاك على واتساب 💛', 'ok');
   setTimeout(function() { closeModal('booking'); }, 2500);
