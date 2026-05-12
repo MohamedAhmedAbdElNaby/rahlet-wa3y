@@ -1000,9 +1000,8 @@ async function submitBooking() {
   var msg = document.getElementById('bMsg');
   if (!n || !p) { showMsg(msg, 'من فضلك اكتب اسمك ورقمك', 'err'); return; }
   var btn = event.target; btn.disabled = true; btn.textContent = 'جاري الإرسال...';
-  await sbInsert('booking', { Name: n, Phone: p, 
+  await sbInsert('Booking', { Name: n, Phone: p, 
   Session_type: s, 
-  Status: 'pending', 
   created_at: new Date().toISOString()
   }
   );
